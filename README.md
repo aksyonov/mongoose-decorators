@@ -1,5 +1,5 @@
 # mongoose-decorators [![Build Status][travis-image]][travis-url]
-ES7 decorators for mongoose models.
+Decorators for mongoose models.
 
 ## Installation
 
@@ -9,7 +9,7 @@ $ npm i mongoose mongoose-decorators --save
 
 ## Usage
 
-This library supports [ES7 decorators proposal][decorators-url] which is supported by babel. To use it you should enable experimental `es7.decorators` feature in babel as described [here][babel-experimental-url].
+This library supports [ECMAScript decorators proposal][decorators-url]. To use decorators with babel you need to add [transform-decorators-legacy][transform-decorators-legacy-url] plugin to `.babelrc`.
 
 Example:
 
@@ -44,7 +44,7 @@ Decorators that wrap common used mongoose schema methods with the same options. 
 
 ### `pre`, `post`
 
-Method decorators that register middleware.
+Method decorators that register [middleware][mongoose-middleware].
 
 ## License
 This library is under the [MIT License][mit-url]
@@ -52,8 +52,8 @@ This library is under the [MIT License][mit-url]
 
 [travis-image]: https://img.shields.io/travis/aksyonov/mongoose-decorators/master.svg
 [travis-url]: https://travis-ci.org/aksyonov/mongoose-decorators
-[babel-url]: http://babeljs.io/
 [decorators-url]: https://github.com/wycats/javascript-decorators
-[babel-experimental-url]: https://babeljs.io/docs/usage/experimental/#usage
+[transform-decorators-legacy-url]: https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy
 [mongoose-schema-url]: http://mongoosejs.com/docs/guide.html#definition
+[mongoose-middleware]: http://mongoosejs.com/docs/middleware.html
 [mit-url]: http://opensource.org/licenses/MIT
