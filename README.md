@@ -30,6 +30,13 @@ export default class User {
   @post('save')
   reindex() {}
 }
+
+// User is now mongoose model
+
+var john = new User({name: 'John'});
+john.save();
+console.log(john.name); // 'John'
+console.log(john.foo); // [Function: foo]
 ```
 
 ### `model(definition, options, configure)`
